@@ -20,19 +20,19 @@
     <h1>Зарегистрируйтесь</h1>
     <div class="mb-3" >
         <label for="formGroupExampleInput" class="form-label">Name:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" name="name">
+        <input type="text" class="form-control" id="formGroupExampleInput" required minlength="3" maxlength="10" placeholder="Name" name="name">
     </div>
     <div class="mb-3" >
         <label for="formGroupExampleInput" class="form-label">Surname:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" name="surname">
+        <input type="text" class="form-control" id="formGroupExampleInput2" required minlength="3" maxlength="10" placeholder="Surname" name="surname">
     </div>
     <div class="mb-3" >
         <label for="formGroupExampleInput" class="form-label">login:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="login" name="login">
+        <input type="text" class="form-control" id="formGroupExampleInput3" required minlength="3" maxlength="10" placeholder="login" name="login">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">pass:</label>
-        <input type="password" class="form-control" id="formGroupExampleInput4" placeholder="password" name="pass">
+        <input type="password" class="form-control" id="formGroupExampleInput4" required minlength="5" maxlength="17" placeholder="password" name="pass">
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
