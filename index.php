@@ -20,7 +20,7 @@
     <h1>Вход в админку</h1>
 <div class="mb-3" >
     <label for="formGroupExampleInput" class="form-label">login:</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" required minlength="3" maxlength="10" placeholder="login" name="name">
+    <input type="text" class="form-control" id="formGroupExampleInput" required minlength="3" maxlength="10" placeholder="login" name="login">
 </div>
 <div class="mb-3">
     <label for="formGroupExampleInput2" class="form-label">pass:</label>

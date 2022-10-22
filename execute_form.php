@@ -2,21 +2,23 @@
 define('br',"<br>");        // Обьявляем константу
 define('hr',"<hr>");        // Обьявляем константу
 //_____________________________________________________________________________________________________________
-include('BD/bd_conect.php');
 //_____________________________________________________________________________________________________________
-echo 'Вывод переменной $_POST:'.br;
-var_dump($_POST);
+$mylogin =$_POST['login'];
+$mypass =$_POST['pass'];
 
-echo "<hr>";
+if (isset($_POST["login"]) && isset($_POST["pass"])) {
+    $connectBD = new mysqli("localhost", "root", "", "admin_template_php");
+    if ($connectBD->connect_error) {
+        die("Ошибка: " . $connectBD->connect_error);
+    }
+    $sql = mysqli_query($connectBD,"SELECT login FROM confirmed_users_adminca ");
+    $res = mysqli_fetch_array($sql);
 
-if($_POST){
-     $nameAdminca= $_POST['name'];
-     $passAdminca= $_POST['pass'];
+    if($res['login']==$mylogin){
+        setcookie("my_login", $mylogin, 0);
+        setcookie("my_pass", $mypass, 0);
+        } else{
+        echo "<h1 style='color: red; text-align: center; margin: 20% 0;'>Вы не зарегистрированны, либо не прошли верификацию</h1>";
+    }
+
 }
-else echo 'нет элементов в _POST'.br;
-
-if($_POST) {
-    setcookie("name", $nameAdminca, 0);
-    setcookie("pass", $passAdminca, 0);
-}
-var_dump($_COOKIE);
