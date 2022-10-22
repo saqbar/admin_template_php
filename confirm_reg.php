@@ -1,3 +1,4 @@
+
 <?php
 $connectBD = new mysqli("localhost", "root", "", "admin_template_php");
 $sql = "SELECT * FROM users_adminca";
@@ -22,7 +23,7 @@ if($result = $connectBD->query($sql)) {
     foreach ($result as $row) {
         echo '<form action="execute_confirm_reg.php" method="post">';
         echo 'id:';
-        echo '<input type="text" name="id" class="inp"  value=" ' . $row["id"] . ' ">';
+        echo '<input type="text" name="id" class="inp" style="width: 25px;" value=" ' . $row["id"] . ' ">';
         echo 'Name:';
         echo '<input type="text" name="name" class="inp"  value=" ' . $row["name"] . ' ">';
         echo 'Surname:';
@@ -31,7 +32,6 @@ if($result = $connectBD->query($sql)) {
         echo '<input type="text" name="login" class="inp"  value=" ' . $row["login"] . ' ">';
         echo 'Password:';
         echo '<input type="text" name="pass" class="inp"  value=" ' . $row["pass"] . ' ">';
-        echo 'достоин ли?:';
         echo '<button type="submit" class="inp">Подтвердить</button>';
         echo "<hr>";
         echo '</form>';
