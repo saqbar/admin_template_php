@@ -24,7 +24,7 @@ if (isset($_POST["login"]) && isset($_POST["pass"])&& isset($_POST["id"])) {
                     Вы решили что пользователь достоин!
               </h1>";
 
-            header("refresh:2;url=/");  // Перенаправляет через 3 секунды на главную страницу
+            header("refresh:2; confirm_reg.php");  // Перенаправляет через 3 секунды на главную страницу
 
         die();
 

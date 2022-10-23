@@ -19,7 +19,7 @@ if (isset($_POST["name"]) && isset($_POST["surname"]) && isset($_POST["login"]) 
     $sql = "INSERT INTO users_adminca ( name,surname,login,pass ) VALUES ( '$name','$surname','$login', '$pass')";
     if ($connectBD->query($sql)) {
         echo "<h1 id='message_about_reg' style='color: red; text-align: center; margin: 20% 0;'>
-                    Вы успешно зарегистрировали!
+                    Вы успешно зарегистрировались, ждите верификации
               </h1>";
         header( "refresh:2;url=/" );  // Перенаправляет через 3 секунды на главную страницу
         die();
