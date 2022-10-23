@@ -1,3 +1,4 @@
+<?php  include ("if_authenticated.php");?>
 <!doctype html>
 <html lang="en">
 <head>
