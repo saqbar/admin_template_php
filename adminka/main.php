@@ -1,4 +1,7 @@
-<?php include('../if_authenticated.php'); ?>
+<?php
+include('../if_authenticated.php');
+include('menu_panel.php');
+?>
 
 <!doctype html>
 <html lang="en">
@@ -13,12 +16,14 @@
 <body>
 <div id="container">
     <div id="aditional_menu">
-        <h3>Добавочное меню:</h3>
-        <a href="../confirm_reg.php">верифицировать пользователя админкой</a><br>
-        <a href="add_product.php">Добавить товар</a>
+        <?php menu_panel(); ?>
     </div>
 </div>
 
 
 </body>
 </html>
+
+
+<?php
+

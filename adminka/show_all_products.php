@@ -1,11 +1,12 @@
 <?php
-include('if_authenticated.php');
-include('adminka/menu_panel.php');
+include('../if_authenticated.php');
+include ('menu_panel.php');
+menu_panel();
 
 $connectBD = new mysqli("localhost", "root", "", "admin_template_php");
-$sql = "SELECT * FROM users_adminca";
-
+$sql = "SELECT * FROM products";
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,23 +20,22 @@ $sql = "SELECT * FROM users_adminca";
 <body>
 
     <?php
-    menu_panel();
+
 if($result = $connectBD->query($sql)) {
     $rowsCount = $result->num_rows; // количество полученных строк
-    echo "<p>Запросов на регистрацию: $rowsCount</p>";
+    echo "<p>Товаров: $rowsCount</p>";
     foreach ($result as $row) {
-        echo '<form action="execute_confirm_reg.php" method="post">';
+        echo '<form action="execute_show_all_products.php" method="post">';
         echo 'id:';
         echo '<input type="text" name="id" class="inp" style="width: 25px;" value="'.$row["id"].'">';
-        echo 'Name:';
+        echo 'Название:';
         echo '<input type="text" name="name" class="inp"  value="'.$row["name"].'">';
-        echo 'Surname:';
-        echo '<input type="text" name="surname" class="inp"  value="'.$row["surname"].'">';
-        echo 'login:';
-        echo '<input type="text" name="login" class="inp"  value="'.$row["login"].'">';
-        echo 'Password:';
-        echo '<input type="text" name="pass" class="inp"  value="'.$row["pass"].'">';
-        echo '<button type="submit" class="inp">Подтвердить</button>';
+        echo 'Цена:';
+        echo '<input type="text" name="price" class="inp"  value="'.$row["price"].'">';
+        echo 'Описание:';
+        echo '<input type="text" name="descr" class="inp"  value="'.$row["descr"].'">';
+        echo '<button type="submit" class="inp" name="update" value="update">Изменить</button>';
+        echo '<button type="submit" class="inp" name="delete" value="delete">Удалить</button>';
         echo "<hr>";
         echo '</form>';
     }
@@ -45,5 +45,3 @@ if($result = $connectBD->query($sql)) {
 
 </body>
 </html>
-
-

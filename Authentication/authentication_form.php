@@ -30,6 +30,7 @@
 
     <button type="submit" class="btn btn-primary">Submit</button>
     <div id="link_reg"><a href="../registration/registration_form.php">регистрация</a></div>
+    <div id="link_reg"><a href="/">на главную</a></div>
 </form>
 
 

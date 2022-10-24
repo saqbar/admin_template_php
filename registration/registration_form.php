@@ -37,6 +37,7 @@
 
     <button type="submit" class="btn btn-primary">Submit</button>
     <div id="link_reg"><a href="../index.php">Или войдите</a></div>
+    <div id="link_reg"><a href="/">на главную</a></div>
 </form>
 
 
