@@ -9,4 +9,4 @@ if(isset($_COOKIE['my_login']) && isset($_COOKIE['my_pass'])){
     if($resLogin['login']==$_COOKIE['my_login'] && $resPass['pass']==$_COOKIE['my_pass']){
         echo "<h2 style='color: gray; text-align: center;'> Доброго времени суток $lg </h2>"."<br>";
     }
-}else header("Location: ../Authentication/authentication_form.php");
+}else header("Location: /admin_template_php/Authentication/authentication_form.php");

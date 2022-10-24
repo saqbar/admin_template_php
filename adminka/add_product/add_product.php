@@ -19,7 +19,7 @@
 <form action="execute_add_product.php" method="post" id="form_add" enctype="multipart/form-data">
 
     <h4>id товара:</h4>
-    <input class="form-control" type="text" placeholder="id товара" required name="id">
+    <input class="form-control" type="text" placeholder="id товара" required name="id_of_prod">
     <h4>Название товара:</h4>
     <input class="form-control" type="text" placeholder="Название товара" required name="name">
     <h4>Цена:</h4>

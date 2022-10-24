@@ -7,8 +7,8 @@ if(isset($_COOKIE['my_login']) && isset($_COOKIE['my_pass'])){                  
     $resPass = mysqli_fetch_array($sqlPass);
 
     if($resLogin['login']==$_COOKIE['my_login'] && $resPass['pass']==$_COOKIE['my_pass']){  // если данные из куки = тем что в БД
-        header("Location: adminka/main.php");                                       // редиректим в админку
+        header("Location: /admin_template_php/adminka/main.php");                                       // редиректим в админку
     }
 }else {
-    header("Location: ../admin_template_php/Authentication/authentication_form.php");   //если нет, редирект на авторизацию
+    header("Location: /admin_template_php/Authentication/authentication_form.php");   //если нет, редирект на авторизацию
 }
